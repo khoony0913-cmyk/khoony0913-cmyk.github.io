@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>글로벌 IT 반도체 & 테크 주식 인사이트</title>
-  <meta name="description" content="삼성전자, SK하이닉스, TSMC 2나노, 엔비디아 HBM4 공급망 및 온디바이스 AI 테크 리포트">
+  <meta name="description" content="삼성전자, SK하이닉스, TSMC, 엔비디아 HBM4 공급망 및 온디바이스 AI 테크 리포트">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -12,10 +12,11 @@
     :root {
       --bg: #0b0f19;
       --card: #151d2e;
-      --card-hover: #1c263c;
+      --card-hover: #1e293f;
       --text: #f1f5f9;
       --muted: #94a3b8;
       --accent: #38bdf8;
+      --accent-glow: rgba(56, 189, 248, 0.15);
       --border: #23304a;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -24,63 +25,128 @@
       background: var(--bg);
       color: var(--text);
       line-height: 1.75;
-      padding: 40px 20px;
+      padding: 30px 20px 80px;
     }
     .container {
-      max-width: 860px;
+      max-width: 900px;
       margin: 0 auto;
     }
-    header {
+    /* Top Brand Bar */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 20px;
       border-bottom: 1px solid var(--border);
-      padding-bottom: 24px;
-      margin-bottom: 40px;
+      margin-bottom: 35px;
+    }
+    .brand-logo {
+      font-size: 18px;
+      font-weight: 800;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .brand-logo span {
+      color: var(--accent);
+    }
+    .partner-btn {
+      font-size: 12px;
+      font-weight: 700;
+      color: #fff;
+      background: #0284c7;
+      padding: 6px 14px;
+      border-radius: 20px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .partner-btn:hover {
+      background: #0369a1;
+    }
+    /* Header */
+    header {
+      margin-bottom: 30px;
     }
     .tagline {
       display: inline-block;
       font-size: 12px;
       font-weight: 700;
       color: var(--accent);
-      background: rgba(56, 189, 248, 0.12);
+      background: var(--accent-glow);
       padding: 4px 12px;
       border-radius: 20px;
       margin-bottom: 12px;
       letter-spacing: 0.5px;
     }
     h1 {
-      font-size: 28px;
+      font-size: 30px;
       font-weight: 800;
       letter-spacing: -0.5px;
       margin-bottom: 8px;
+      color: #fff;
     }
     .desc {
       color: var(--muted);
       font-size: 15px;
     }
+    /* Category Filter Tabs */
+    .category-tabs {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding-bottom: 15px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid var(--border);
+    }
+    .tab-btn {
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+    .tab-btn:hover {
+      color: #fff;
+      border-color: var(--accent);
+    }
+    .tab-btn.active {
+      background: var(--accent);
+      color: #0b0f19;
+      border-color: var(--accent);
+      font-weight: 700;
+    }
+    /* Post Cards */
     article {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 16px;
       padding: 36px;
-      margin-bottom: 36px;
+      margin-bottom: 30px;
       transition: transform 0.2s, border-color 0.2s;
     }
     article:hover {
-      border-color: #3b82f6;
+      border-color: #38bdf8;
     }
     .post-meta {
       display: flex;
-      gap: 12px;
+      gap: 10px;
       align-items: center;
       font-size: 13px;
       color: var(--muted);
       margin-bottom: 14px;
     }
     .badge {
-      background: rgba(56, 189, 248, 0.15);
+      background: var(--accent-glow);
       color: var(--accent);
-      padding: 2px 8px;
+      padding: 3px 10px;
       border-radius: 6px;
-      font-weight: 600;
+      font-weight: 700;
       font-size: 11px;
     }
     .post-title {
@@ -111,11 +177,16 @@
       margin-bottom: 8px;
     }
     .backlink-box {
-      background: rgba(56, 189, 248, 0.06);
-      border: 1px solid rgba(56, 189, 248, 0.2);
+      background: var(--accent-glow);
+      border: 1px solid rgba(56, 189, 248, 0.25);
       border-radius: 12px;
       padding: 20px 24px;
       margin-top: 30px;
+    }
+    .backlink-box p {
+      margin: 0;
+      font-size: 14px;
+      color: #e2e8f0;
     }
     .backlink-box a {
       color: var(--accent);
@@ -135,18 +206,32 @@
 </head>
 <body>
   <div class="container">
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="brand-logo">SEMICON<span>&</span>TECH</div>
+      <a href="https://uplusez.co.kr" target="_blank" class="partner-btn">공식 통신지원 센터 ➔</a>
+    </div>
+
     <header>
-      <span class="tagline">Tech & Semiconductor Insights</span>
+      <span class="tagline">Global Semiconductor & Tech Media</span>
       <h1>글로벌 IT 반도체 & 테크 주식 인사이트</h1>
-      <p class="desc">글로벌 파운드리 2나노 공정, 삼성전자·SK하이닉스 HBM4 밸류체인 및 온디바이스 AI 테크 리포트</p>
+      <p class="desc">TSMC 2나노 로드맵, 삼성전자·SK하이닉스 HBM4 공급망 및 온디바이스 AI 산업 분석</p>
     </header>
 
-    <main>
-      <!-- 최신 2호 기사: TSMC 2나노 & 모바일 AI 칩 -->
-      <article>
+    <!-- Category Filter Tabs -->
+    <nav class="category-tabs">
+      <button class="tab-btn active" onclick="filterCategory('all', this)">전체보기</button>
+      <button class="tab-btn" onclick="filterCategory('semiconductor', this)">AI 반도체 & HBM</button>
+      <button class="tab-btn" onclick="filterCategory('mobile', this)">모바일 칩셋 & AP</button>
+      <button class="tab-btn" onclick="filterCategory('stock', this)">테크 주식 & 시장전망</button>
+    </nav>
+
+    <main id="post-list">
+      <!-- Article 1: TSMC 2나노 & 모바일 AP -->
+      <article data-category="mobile semiconductor">
         <div class="post-meta">
-          <span class="badge">최신 리포트</span>
-          <span>2026. 09. 04 · Tech & Semiconductor Desk</span>
+          <span class="badge">모바일 칩셋 & AP</span>
+          <span>2026. 09. 04 · Tech Desk</span>
         </div>
         <h2 class="post-title">TSMC 2나노 공정 양산과 모바일 AI 칩 경쟁: 차세대 스마트폰 하드웨어 전환과 통신 수요 전망</h2>
         <div class="post-content">
@@ -161,21 +246,19 @@
           <h2>2. 온디바이스 AI 고도화와 데이터 트래픽의 상관관계</h2>
           <p>스마트폰이 단순한 통신 단말기를 넘어 '개인 맞춤형 AI 에이전트'로 진화함에 따라 통신망 이용 행태에도 뚜렷한 구조적 변화가 감지되고 있습니다. 로컬 기기에서 생성된 고해상도 AI 멀티미디어와 실시간 데이터 동기화 수요가 맞물리면서, 월평균 데이터 소비량이 50GB를 초과하는 고용량 데이터 요금제 이용자 비중이 빠르게 늘고 있습니다.</p>
 
-          <h2>3. 스마트폰 교체 시점과 경제적 통신 전략</h2>
-          <p>2나노 칩셋 탑재 기기들의 출고가 상승이 예상되는 가운데, 합리적인 기기 교체를 희망하는 소비자들은 공식 유통 채널의 지원 혜택을 사전에 비교하는 추세가 뚜렷합니다. 단말기 구매 시 제조사 공시지원금과 유통점 추가 지원금 규모를 실시간으로 확인하고, 본인의 월 사용 패턴에 맞춘 결합 할인을 연계하면 체감 통신 비용을 크게 낮출 수 있습니다.</p>
-
           <div class="backlink-box">
             <p><strong>💡 실시간 통신비 및 단말 지원금 비교 안내</strong></p>
-            <p style="margin-top: 6px; font-size: 14px;">투명한 공시지원금 조회와 추가 혜택 시뮬레이션은 공식 채널을 통해 확인 가능합니다.<br>
+            <p style="margin-top: 6px;">투명한 공시지원금 조회와 추가 혜택 시뮬레이션은 공식 채널을 통해 확인 가능합니다.<br>
             👉 <a href="https://uplusez.co.kr" target="_blank">[단말기 공시지원금 및 실시간 요금 계산기 바로가기]</a></p>
           </div>
         </div>
       </article>
 
-      <!-- 1호 기사: 엔비디아 차세대 칩 & HBM4 -->
-      <article>
+      <!-- Article 2: 엔비디아 차세대 AI 칩 & HBM4 -->
+      <article data-category="semiconductor stock">
         <div class="post-meta">
-          <span>2026. 09. 04 · Tech & Semiconductor Desk</span>
+          <span class="badge">AI 반도체 & HBM</span>
+          <span>2026. 09. 04 · Tech Desk</span>
         </div>
         <h2 class="post-title">엔비디아 차세대 AI 칩과 HBM4 경쟁: 온디바이스 AI 스마트폰 칩셋 전쟁과 테크 주식 전망</h2>
         <div class="post-content">
@@ -189,7 +272,7 @@
 
           <div class="backlink-box">
             <p><strong>💡 AI 모바일 디바이스 지원 혜택 안내</strong></p>
-            <p style="margin-top: 6px; font-size: 14px;">최신 AI 스마트폰 단독 혜택 및 요금제 비교는 공식몰에서 제공 중입니다.<br>
+            <p style="margin-top: 6px;">최신 AI 스마트폰 단독 혜택 및 요금제 비교는 공식몰에서 제공 중입니다.<br>
             👉 <a href="https://uplusez.co.kr" target="_blank">[LG U+ 공식온라인스토어 (유플러스EZ) 사전예약 단독 혜택]</a></p>
           </div>
         </div>
@@ -200,5 +283,21 @@
       <p>© 2026 글로벌 IT 반도체 & 테크 주식 인사이트 · All rights reserved.</p>
     </footer>
   </div>
+
+  <script>
+    function filterCategory(cat, btn) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const articles = document.querySelectorAll('#post-list article');
+      articles.forEach(article => {
+        if (cat === 'all' || article.getAttribute('data-category').includes(cat)) {
+          article.style.display = 'block';
+        } else {
+          article.style.display = 'none';
+        }
+      });
+    }
+  </script>
 </body>
 </html>
