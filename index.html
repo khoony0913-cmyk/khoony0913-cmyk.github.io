@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>글로벌 IT 반도체 & 테크 주식 인사이트</title>
-  <meta name="description" content="삼성전자, SK하이닉스, TSMC, 엔비디아 HBM4 공급망 및 온디바이스 AI 테크 리포트">
+  <meta name="description" content="삼성전자, SK하이닉스, TSMC 반도체 동향, 알리익스프레스 프로모션 코드 및 온디바이스 AI 테크 리포트">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -12,7 +12,6 @@
     :root {
       --bg: #0b0f19;
       --card: #151d2e;
-      --card-hover: #1e293f;
       --text: #f1f5f9;
       --muted: #94a3b8;
       --accent: #38bdf8;
@@ -27,207 +26,124 @@
       line-height: 1.75;
       padding: 30px 20px 80px;
     }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    /* Top Brand Bar */
+    .container { max-width: 900px; margin: 0 auto; }
     .top-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-bottom: 20px;
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 35px;
+      display: flex; justify-content: space-between; align-items: center;
+      padding-bottom: 20px; border-bottom: 1px solid var(--border); margin-bottom: 35px;
     }
-    .brand-logo {
-      font-size: 18px;
-      font-weight: 800;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .brand-logo span {
-      color: var(--accent);
-    }
+    .brand-logo { font-size: 18px; font-weight: 800; color: #fff; }
+    .brand-logo span { color: var(--accent); }
     .partner-btn {
-      font-size: 12px;
-      font-weight: 700;
-      color: #fff;
-      background: #0284c7;
-      padding: 6px 14px;
-      border-radius: 20px;
-      text-decoration: none;
-      transition: background 0.2s;
+      font-size: 12px; font-weight: 700; color: #fff; background: #0284c7;
+      padding: 6px 14px; border-radius: 20px; text-decoration: none;
     }
-    .partner-btn:hover {
-      background: #0369a1;
-    }
-    /* Header */
-    header {
-      margin-bottom: 30px;
-    }
+    header { margin-bottom: 30px; }
     .tagline {
-      display: inline-block;
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--accent);
-      background: var(--accent-glow);
-      padding: 4px 12px;
-      border-radius: 20px;
-      margin-bottom: 12px;
-      letter-spacing: 0.5px;
+      display: inline-block; font-size: 12px; font-weight: 700; color: var(--accent);
+      background: var(--accent-glow); padding: 4px 12px; border-radius: 20px; margin-bottom: 12px;
     }
-    h1 {
-      font-size: 30px;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-      margin-bottom: 8px;
-      color: #fff;
-    }
-    .desc {
-      color: var(--muted);
-      font-size: 15px;
-    }
-    /* Category Filter Tabs */
+    h1 { font-size: 30px; font-weight: 800; margin-bottom: 8px; color: #fff; }
+    .desc { color: var(--muted); font-size: 15px; }
     .category-tabs {
-      display: flex;
-      gap: 10px;
-      overflow-x: auto;
-      padding-bottom: 15px;
-      margin-bottom: 30px;
-      border-bottom: 1px solid var(--border);
+      display: flex; gap: 10px; overflow-x: auto; padding-bottom: 15px;
+      margin-bottom: 30px; border-bottom: 1px solid var(--border);
     }
     .tab-btn {
-      background: var(--card);
-      border: 1px solid var(--border);
-      color: var(--muted);
-      padding: 8px 16px;
-      border-radius: 30px;
-      font-size: 13px;
-      font-weight: 600;
-      cursor: pointer;
-      white-space: nowrap;
-      transition: all 0.2s;
+      background: var(--card); border: 1px solid var(--border); color: var(--muted);
+      padding: 8px 16px; border-radius: 30px; font-size: 13px; font-weight: 600;
+      cursor: pointer; white-space: nowrap; transition: all 0.2s;
     }
-    .tab-btn:hover {
-      color: #fff;
-      border-color: var(--accent);
-    }
+    .tab-btn:hover { color: #fff; border-color: var(--accent); }
     .tab-btn.active {
-      background: var(--accent);
-      color: #0b0f19;
-      border-color: var(--accent);
-      font-weight: 700;
+      background: var(--accent); color: #0b0f19; border-color: var(--accent); font-weight: 700;
     }
-    /* Post Cards */
     article {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 36px;
-      margin-bottom: 30px;
-      transition: transform 0.2s, border-color 0.2s;
+      background: var(--card); border: 1px solid var(--border); border-radius: 16px;
+      padding: 36px; margin-bottom: 30px; transition: border-color 0.2s;
     }
-    article:hover {
-      border-color: #38bdf8;
-    }
-    .post-meta {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 14px;
-    }
+    article:hover { border-color: #38bdf8; }
+    .post-meta { display: flex; gap: 10px; align-items: center; font-size: 13px; color: var(--muted); margin-bottom: 14px; }
     .badge {
-      background: var(--accent-glow);
-      color: var(--accent);
-      padding: 3px 10px;
-      border-radius: 6px;
-      font-weight: 700;
-      font-size: 11px;
+      background: var(--accent-glow); color: var(--accent); padding: 3px 10px;
+      border-radius: 6px; font-weight: 700; font-size: 11px;
     }
-    .post-title {
-      font-size: 23px;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 20px;
-      line-height: 1.45;
-      letter-spacing: -0.3px;
+    .badge.sale { background: rgba(244, 63, 94, 0.15); color: #fb7185; }
+    .post-title { font-size: 23px; font-weight: 700; color: #fff; margin-bottom: 20px; line-height: 1.45; }
+    .post-content h2 { font-size: 18px; font-weight: 700; color: var(--accent); margin: 28px 0 12px 0; }
+    .post-content p { margin-bottom: 16px; color: #cbd5e1; font-size: 15px; }
+    .post-content ul { margin-left: 20px; margin-bottom: 20px; color: #cbd5e1; }
+    .post-content li { margin-bottom: 8px; }
+    .coupon-box {
+      background: rgba(244, 63, 94, 0.08); border: 1px solid rgba(244, 63, 94, 0.25);
+      border-radius: 12px; padding: 18px 22px; margin: 20px 0;
     }
-    .post-content h2 {
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--accent);
-      margin: 28px 0 12px 0;
-    }
-    .post-content p {
-      margin-bottom: 16px;
-      color: #cbd5e1;
-      font-size: 15px;
-    }
-    .post-content ul {
-      margin-left: 20px;
-      margin-bottom: 20px;
-      color: #cbd5e1;
-    }
-    .post-content li {
-      margin-bottom: 8px;
+    .coupon-code {
+      font-family: monospace; font-size: 16px; font-weight: 700; color: #fb7185;
+      background: rgba(0, 0, 0, 0.3); padding: 2px 8px; border-radius: 4px;
     }
     .backlink-box {
-      background: var(--accent-glow);
-      border: 1px solid rgba(56, 189, 248, 0.25);
-      border-radius: 12px;
-      padding: 20px 24px;
-      margin-top: 30px;
+      background: var(--accent-glow); border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 12px; padding: 20px 24px; margin-top: 30px;
     }
-    .backlink-box p {
-      margin: 0;
-      font-size: 14px;
-      color: #e2e8f0;
-    }
-    .backlink-box a {
-      color: var(--accent);
-      font-weight: 700;
-      text-decoration: underline;
-      text-underline-offset: 4px;
-    }
-    footer {
-      text-align: center;
-      color: var(--muted);
-      font-size: 13px;
-      margin-top: 60px;
-      padding-top: 24px;
-      border-top: 1px solid var(--border);
-    }
+    .backlink-box a { color: var(--accent); font-weight: 700; text-decoration: underline; }
+    footer { text-align: center; color: var(--muted); font-size: 13px; margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- Top Bar -->
     <div class="top-bar">
       <div class="brand-logo">SEMICON<span>&</span>TECH</div>
       <a href="https://uplusez.co.kr" target="_blank" class="partner-btn">공식 통신지원 센터 ➔</a>
     </div>
 
     <header>
-      <span class="tagline">Global Semiconductor & Tech Media</span>
-      <h1>글로벌 IT 반도체 & 테크 주식 인사이트</h1>
-      <p class="desc">TSMC 2나노 로드맵, 삼성전자·SK하이닉스 HBM4 공급망 및 온디바이스 AI 산업 분석</p>
+      <span class="tagline">Tech & Deals Media</span>
+      <h1>글로벌 IT 반도체 & 테크 프로모션 인사이트</h1>
+      <p class="desc">글로벌 반도체 분석부터 매월 알리익스프레스 프로모션 코드 & IT 직구 꿀팁까지</p>
     </header>
 
-    <!-- Category Filter Tabs -->
     <nav class="category-tabs">
       <button class="tab-btn active" onclick="filterCategory('all', this)">전체보기</button>
+      <button class="tab-btn" onclick="filterCategory('aliexpress', this)">🔥 알리 할인쿠폰</button>
       <button class="tab-btn" onclick="filterCategory('semiconductor', this)">AI 반도체 & HBM</button>
       <button class="tab-btn" onclick="filterCategory('mobile', this)">모바일 칩셋 & AP</button>
       <button class="tab-btn" onclick="filterCategory('stock', this)">테크 주식 & 시장전망</button>
     </nav>
 
     <main id="post-list">
-      <!-- Article 1: TSMC 2나노 & 모바일 AP -->
+      <!-- 3호: 알리익스프레스 9월 프로모션 코드 -->
+      <article data-category="aliexpress">
+        <div class="post-meta">
+          <span class="badge sale">알리 할인쿠폰</span>
+          <span>2026. 09. 04 · Deals Desk</span>
+        </div>
+        <h2 class="post-title">2026년 9월 알리익스프레스 프로모션 코드 총정리: 초이스데이 금액대별 할인쿠폰과 직구 꿀팁</h2>
+        <div class="post-content">
+          <p>매월 초 정기적으로 진행되는 알리익스프레스 초이스데이(Choice Day)와 가을 맞이 특별 프로모션 할인 코드를 정리해 드립니다. 스마트폰 고속 충전기, 맥세이프 악세서리, 태블릿 거치대 등 테크 주변용품 구매 시 활용 가능한 선착순 쿠폰 정보입니다.</p>
+
+          <h2>1. 2026년 9월 금액대별 프로모션 할인 코드</h2>
+          <div class="coupon-box">
+            <ul>
+              <li>28달러 이상 구매 시 3.5달러 할인: <span class="coupon-code">GONG03</span> / <span class="coupon-code">YUAG03</span></li>
+              <li>56달러 이상 구매 시 7달러 할인: <span class="coupon-code">GONG07</span> / <span class="coupon-code">KJHF07</span></li>
+              <li>90달러 이상 구매 시 10달러 할인: <span class="coupon-code">GONG10</span> / <span class="coupon-code">DSAE10</span></li>
+              <li>139달러 이상 구매 시 15달러 할인: <span class="coupon-code">GONG15</span> / <span class="coupon-code">KLHG15</span></li>
+              <li>349달러 이상 구매 시 35달러 할인: <span class="coupon-code">GONG35</span> / <span class="coupon-code">MGFD35</span></li>
+            </ul>
+          </div>
+
+          <h2>2. 결제 수단별 추가 즉시 할인</h2>
+          <p>토스페이, 카카오페이, 네이버페이 원화(KRW) 결제 시 선착순 추가 할인이 중복 적용되며, 신한/국민/삼성/농협 카드 청구 할인과 병행 가능합니다.</p>
+
+          <div class="backlink-box">
+            <p><strong>💡 스마트폰 기기변경 및 결합 혜택 안내</strong></p>
+            <p style="margin-top: 6px; font-size: 14px;">최신 플래그십 단말기 개통 시 고급 사은품 패키지와 공식 지원금 비교는 공식 채널에서 확인 가능합니다.<br>
+            👉 <a href="https://uplusez.co.kr" target="_blank">[실시간 스마트폰 혜택 비교 가이드 바로가기]</a></p>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2호: TSMC 2나노 & 모바일 AP -->
       <article data-category="mobile semiconductor">
         <div class="post-meta">
           <span class="badge">모바일 칩셋 & AP</span>
@@ -235,26 +151,17 @@
         </div>
         <h2 class="post-title">TSMC 2나노 공정 양산과 모바일 AI 칩 경쟁: 차세대 스마트폰 하드웨어 전환과 통신 수요 전망</h2>
         <div class="post-content">
-          <p>글로벌 파운드리 1위 TSMC의 2나노(N2) 공정 양산 로드맵이 가시화되면서, 차세대 모바일 애플리케이션 프로세서(AP)를 둘러싼 빅테크의 칩셋 전쟁이 새로운 국면에 접어들었습니다. 애플의 차세대 실리콘과 퀄컴 스냅드래곤 차기 라인업이 2나노 공정을 선점하기 위한 웨이퍼 쟁탈전을 벌이면서, 플래그십 스마트폰의 AI 성능 도약이 가속화되고 있습니다.</p>
-
-          <h2>1. 2나노 GAA 트랜지스터 도입이 가져올 모바일 하드웨어 혁신</h2>
-          <ul>
-            <li>전력 효율 개선: 동일 성능 기준 소비 전력이 약 25~30% 감소하여, 폴더블폰과 대화면 기기의 최대 약점인 배터리 지속 시간이 대폭 연장됩니다.</li>
-            <li>NPU 연산 밀도 극대화: 칩 면적당 신경망처리장치(NPU) 집적도가 1.5배 이상 증가하여, 클라우드 연결 없이 기기 내부에서 수십억 개 매개변수의 거대언어모델(LLM)을 지연 시간 없이 구동할 수 있게 됩니다.</li>
-          </ul>
-
-          <h2>2. 온디바이스 AI 고도화와 데이터 트래픽의 상관관계</h2>
-          <p>스마트폰이 단순한 통신 단말기를 넘어 '개인 맞춤형 AI 에이전트'로 진화함에 따라 통신망 이용 행태에도 뚜렷한 구조적 변화가 감지되고 있습니다. 로컬 기기에서 생성된 고해상도 AI 멀티미디어와 실시간 데이터 동기화 수요가 맞물리면서, 월평균 데이터 소비량이 50GB를 초과하는 고용량 데이터 요금제 이용자 비중이 빠르게 늘고 있습니다.</p>
+          <p>글로벌 파운드리 1위 TSMC의 2나노(N2) 공정 양산 로드맵이 가시화되면서, 차세대 모바일 애플리케이션 프로세서(AP)를 둘러싼 빅테크의 칩셋 전쟁이 새로운 국면에 접어들었습니다.</p>
 
           <div class="backlink-box">
             <p><strong>💡 실시간 통신비 및 단말 지원금 비교 안내</strong></p>
-            <p style="margin-top: 6px;">투명한 공시지원금 조회와 추가 혜택 시뮬레이션은 공식 채널을 통해 확인 가능합니다.<br>
+            <p style="margin-top: 6px; font-size: 14px;">투명한 공시지원금 조회와 추가 혜택 시뮬레이션은 공식 채널을 통해 확인 가능합니다.<br>
             👉 <a href="https://uplusez.co.kr" target="_blank">[단말기 공시지원금 및 실시간 요금 계산기 바로가기]</a></p>
           </div>
         </div>
       </article>
 
-      <!-- Article 2: 엔비디아 차세대 AI 칩 & HBM4 -->
+      <!-- 1호: 엔비디아 차세대 AI 칩 & HBM4 -->
       <article data-category="semiconductor stock">
         <div class="post-meta">
           <span class="badge">AI 반도체 & HBM</span>
@@ -262,17 +169,11 @@
         </div>
         <h2 class="post-title">엔비디아 차세대 AI 칩과 HBM4 경쟁: 온디바이스 AI 스마트폰 칩셋 전쟁과 테크 주식 전망</h2>
         <div class="post-content">
-          <p>글로벌 테크 주식 시장의 중심축이 서버용 AI 가속기에서 '온디바이스 AI'와 초고대역폭 메모리(HBM4)로 빠르게 확장되고 있습니다. 엔비디아의 차세대 아키텍처 도입과 맞물린 삼성전자·SK하이닉스의 HBM 공급망 재편, 그리고 퀄컴·삼성의 차세대 3나노 모바일 AP가 주식 시장과 디바이스 생태계에 미치는 영향을 종합 정리했습니다.</p>
-
-          <h2>1. HBM4 규격 대전환: 삼성전자 vs SK하이닉스의 주도권 쟁탈전</h2>
-          <ul>
-            <li>엔비디아 공급망 다변화: 차세대 AI 가속기의 공급 병목을 해결하기 위해 HBM3E 및 차세대 HBM4 공급망에서 삼성전자의 퀄 테스트 통과를 가속화하고 있습니다.</li>
-            <li>파운드리-메모리 원팀 전략: HBM4부터는 베이스 다이를 첨단 파운드리 공정에서 제작해야 하므로, 메모리와 파운드리를 모두 보유한 삼성전자의 턴키 솔루션과 SK하이닉스-TSMC 연합 진영 간의 기술 경쟁이 핵심 변수로 부각되었습니다.</li>
-          </ul>
+          <p>글로벌 테크 주식 시장의 중심축이 서버용 AI 가속기에서 '온디바이스 AI'와 초고대역폭 메모리(HBM4)로 빠르게 확장되고 있습니다.</p>
 
           <div class="backlink-box">
             <p><strong>💡 AI 모바일 디바이스 지원 혜택 안내</strong></p>
-            <p style="margin-top: 6px;">최신 AI 스마트폰 단독 혜택 및 요금제 비교는 공식몰에서 제공 중입니다.<br>
+            <p style="margin-top: 6px; font-size: 14px;">최신 AI 스마트폰 단독 혜택 및 요금제 비교는 공식몰에서 제공 중입니다.<br>
             👉 <a href="https://uplusez.co.kr" target="_blank">[LG U+ 공식온라인스토어 (유플러스EZ) 사전예약 단독 혜택]</a></p>
           </div>
         </div>
